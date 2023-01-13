@@ -1,0 +1,72 @@
+.header{
+    height: 40%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    h2{
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        letter-spacing: -0.0083em;
+    }
+    h5{
+        font-weight: bold;
+        color: white;
+        text-transform: capitalize;
+        font-size: 1rem;
+        line-height: 1.57;
+        letter-spacing: 0.00714em;
+    }
+}
+.banner{
+    background-image: url(../../assets/banner.jpg);
+    height: 400px;
+    width: 100%;
+}
+
+.sub-header{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    border: 0;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin: 30px;
+    width: 100px;
+    height: 200px;
+    img{
+        width: 100px;
+        margin: 0 auto;
+    }
+    h3{
+        font-weight: 700;
+    }
+    p{
+        font-weight: 700;
+    }
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td{
+    width: 25%;
+  }
+   th {
+    background-color: aquamarine;
+    width: 25%;
+  }

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 details">
+            <div class="img">
+                <img [src]="coinData?.image?.large" alt="">
+                <h3 class="text-center">{{coinData?.name}}</h3>
+                <h2 [innerHTML]="coinData?.description.en.split('. ')[0]"></h2>
+                <div class="more-details">
+                    <span class="title">Rank:  </span>
+                    <span class="value">{{coinData?.market_cap_rank}}</span><br>
+                    <span class="title">Current Price:  </span>
+                    <span class="value">{{coinData?.market_data.current_price.idr|currency:currency}}</span><br>
+                    <span class="title">Market Cap:  </span>
+                    <span class="value">{{coinData?.market_data.market_cap.idr|currency:currency}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10 mx-auto my-5">
+        
+        <canvas style="width: 300px;" baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="lineChartType"></canvas>
+        <h3 style="margin-left: 45%;"  *ngIf="days!==365">{{days}} days</h3>
+        <h3 style="margin-left: 45%;" *ngIf="days==365">1 Years</h3>
+            <div class="d-flex justify-content-around mt-2">
+                
+            <button (click)="getGraphData(1)" mat-raised-button color="basic">24 hours</button>
+            <button (click)="getGraphData(30)" mat-raised-button color="basic">30 days</button>
+            <button (click)="getGraphData(180)" mat-raised-button color="basic">180 days</button>
+            <button (click)="getGraphData(365)" mat-raised-button color="basic">1 year</button>
+    </div>
+</div>
